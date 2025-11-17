@@ -48,7 +48,10 @@ This repository contains comprehensive documentation for a full AI Drive-Thru De
 10. **[Agent Prompt Template](docs/Agent-Prompt-Template.md)**
     - Template and guidelines for development agents implementing the system
 
-11. **[Architecture Overview](docs/Architecture-Overview.md)**
+11. **[Implementation Guidelines](docs/Implementation-Guidelines.md)**
+    - Comprehensive guidelines and best practices for development agents
+
+12. **[Architecture Overview](docs/Architecture-Overview.md)**
     - System architecture, component interactions, and technology stack
 
 ## Quick Start Guide
@@ -57,10 +60,11 @@ This repository contains comprehensive documentation for a full AI Drive-Thru De
 
 1. **Read the Architecture Overview** to understand the system design
 2. **Review the Build Phase Plan** to understand implementation phases
-3. **Follow the Agent Prompt Template** for implementation guidelines
-4. **Use the Implementation Log Template** to track your progress
-5. **Reference BRD Level 2** for detailed functional specifications
-6. **Use the Testing Strategy** to validate your implementation
+3. **Follow the Implementation Guidelines** for comprehensive development practices
+4. **Use the Agent Prompt Template** for task-specific implementation guidance
+5. **Use the Implementation Log Template** to track your progress
+6. **Reference BRD Level 2** for detailed functional specifications
+7. **Use the Testing Strategy** to validate your implementation
 
 ### For Project Managers
 
@@ -201,10 +205,11 @@ See [Build Phase Plan](docs/Build-Phase-Plan.md) for detailed information.
 
 When implementing features:
 
-1. Follow the [Agent Prompt Template](docs/Agent-Prompt-Template.md)
-2. Update the [Implementation Log](docs/Implementation-Log-Template.md)
-3. Follow the [Testing Strategy](docs/Testing-Strategy.md)
-4. Reference [BRD Level 2](docs/BRD-Level-2-Functional-Specification.md) for specifications
+1. Follow the [Implementation Guidelines](docs/Implementation-Guidelines.md) for best practices
+2. Use the [Agent Prompt Template](docs/Agent-Prompt-Template.md) for task structure
+3. Update the [Implementation Log](docs/Implementation-Log-Template.md) regularly
+4. Follow the [Testing Strategy](docs/Testing-Strategy.md) for quality assurance
+5. Reference [BRD Level 2](docs/BRD-Level-2-Functional-Specification.md) for specifications
 
 ## License
 

@@ -1,7 +1,8 @@
 """
 AI Drive-Thru Demo Application - Main Entry Point
 Version: 1.0.0
-Phase 1: Voice System Implementation
+Phase 1: Voice System ✅
+Phase 2: Menu System ✅
 """
 import asyncio
 from contextlib import asynccontextmanager
@@ -11,12 +12,13 @@ from fastapi.responses import JSONResponse
 
 from src.config import settings
 from src.utils import logger, log_service_event
-from src.api.routes import voice_router
+from src.api.routes import voice_router, menu_router
 from src.api.websocket import ws_handler
 from src.services.stt import stt_service
 from src.services.tts import tts_service
 from src.services.language import language_detector
 from src.services.interruption import interruption_detector
+from src.database import init_db
 
 
 @asynccontextmanager
@@ -35,6 +37,10 @@ async def lifespan(app: FastAPI):
     )
 
     try:
+        # Initialize database
+        logger.info("Initializing database...")
+        init_db()
+
         # Initialize STT service
         logger.info("Initializing STT service...")
         await stt_service.initialize()
@@ -104,6 +110,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(voice_router)
+app.include_router(menu_router)
 
 
 # Root endpoint

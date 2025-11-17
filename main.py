@@ -3,6 +3,7 @@ AI Drive-Thru Demo Application - Main Entry Point
 Version: 1.0.0
 Phase 1: Voice System ✅
 Phase 2: Menu System ✅
+Phase 3: NLU + Intent System ✅
 """
 import asyncio
 from contextlib import asynccontextmanager
@@ -12,12 +13,13 @@ from fastapi.responses import JSONResponse
 
 from src.config import settings
 from src.utils import logger, log_service_event
-from src.api.routes import voice_router, menu_router
+from src.api.routes import voice_router, menu_router, nlu_router
 from src.api.websocket import ws_handler
 from src.services.stt import stt_service
 from src.services.tts import tts_service
 from src.services.language import language_detector
 from src.services.interruption import interruption_detector
+from src.services.nlu import nlu_service
 from src.database import init_db
 
 
@@ -49,6 +51,10 @@ async def lifespan(app: FastAPI):
         logger.info("Initializing TTS service...")
         await tts_service.initialize()
 
+        # Initialize NLU service
+        logger.info("Initializing NLU service...")
+        await nlu_service.initialize()
+
         # Perform health checks
         logger.info("Performing health checks...")
         stt_health = await stt_service.health_check()
@@ -57,7 +63,8 @@ async def lifespan(app: FastAPI):
         logger.info(
             "Services initialized",
             stt_status=stt_health.status.value,
-            tts_status=tts_health.status.value
+            tts_status=tts_health.status.value,
+            nlu_status=nlu_service.status.value
         )
 
         log_service_event(
@@ -111,6 +118,7 @@ app.add_middleware(
 # Include routers
 app.include_router(voice_router)
 app.include_router(menu_router)
+app.include_router(nlu_router)
 
 
 # Root endpoint

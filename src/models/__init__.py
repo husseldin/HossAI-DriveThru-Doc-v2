@@ -41,6 +41,16 @@ from .menu import (
     BulkOperation,
     BulkOperationResult,
 )
+from .nlu import (
+    IntentType,
+    SlotType,
+    Intent,
+    Slot,
+    NLURequest,
+    NLUResponse,
+    KeywordMatch,
+    TriggerWord,
+)
 
 __all__ = [
     # Base models

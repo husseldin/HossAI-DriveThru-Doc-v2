@@ -103,11 +103,11 @@ Phase 1 implements the core voice interaction capabilities including:
 python main.py
 ```
 
-The application will start on `http://localhost:8000`
+The application will start on `http://localhost:46000`
 
-- **API Documentation**: http://localhost:8000/docs
-- **Health Check**: http://localhost:8000/health
-- **WebSocket**: ws://localhost:8000/ws/voice/{client_id}
+- **API Documentation**: http://localhost:46000/docs
+- **Health Check**: http://localhost:46000/health
+- **WebSocket**: ws://localhost:46000/ws/voice/{client_id}
 
 #### Production Mode
 
@@ -117,7 +117,7 @@ export ENVIRONMENT=production
 export DEBUG=false
 
 # Run with uvicorn
-uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
+uvicorn main:app --host 0.0.0.0 --port 46000 --workers 4
 ```
 
 ## API Endpoints
@@ -177,7 +177,7 @@ pytest --cov=src --cov-report=html
 #### Test STT (Speech-to-Text)
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/voice/stt/transcribe" \
+curl -X POST "http://localhost:46000/api/v1/voice/stt/transcribe" \
   -F "audio=@test_audio.wav" \
   -F "language=ar"
 ```
@@ -185,7 +185,7 @@ curl -X POST "http://localhost:8000/api/v1/voice/stt/transcribe" \
 #### Test TTS (Text-to-Speech)
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/voice/tts/generate" \
+curl -X POST "http://localhost:46000/api/v1/voice/tts/generate" \
   -H "Content-Type: application/json" \
   -d '{"text": "مرحبا بك", "language": "ar"}' \
   --output speech.wav

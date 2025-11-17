@@ -17,7 +17,7 @@ export class VoiceWebSocketClient {
   }
 
   connect() {
-    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000'
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:46000'
     const url = `${wsUrl}/ws/voice/${this.clientId}`
 
     try {

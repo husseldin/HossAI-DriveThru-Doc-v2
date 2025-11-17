@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosError } from 'axios'
 import { toast } from 'sonner'
 
 // Get API URL from environment
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:46000'
 
 // Create axios instance
 const apiClient: AxiosInstance = axios.create({

@@ -204,7 +204,7 @@ export default function SettingsPage() {
             </div>
             <div className="flex justify-between py-2 border-b border-gray-200">
               <span className="text-sm font-medium text-gray-600">API Endpoint</span>
-              <span className="text-sm text-gray-900">http://localhost:8000</span>
+              <span className="text-sm text-gray-900">http://localhost:46000</span>
             </div>
             <div className="flex justify-between py-2">
               <span className="text-sm font-medium text-gray-600">Last Updated</span>

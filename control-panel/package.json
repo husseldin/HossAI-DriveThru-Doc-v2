@@ -4,9 +4,9 @@
   "description": "Control Panel for AI Drive-Thru Demo Application",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 46001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 46001",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "test": "jest",

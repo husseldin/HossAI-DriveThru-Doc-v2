@@ -27,7 +27,7 @@ export default defineConfig({
   // Shared settings
   use: {
     // Base URL for tests
-    baseURL: 'http://localhost:3001',
+    baseURL: 'http://localhost:46002',
 
     // Collect trace on first retry
     trace: 'on-first-retry',
@@ -74,7 +74,7 @@ export default defineConfig({
   webServer: [
     {
       command: 'cd demo-ui && npm run dev',
-      url: 'http://localhost:3001',
+      url: 'http://localhost:46002',
       reuseExistingServer: !process.env.CI,
       timeout: 120 * 1000,
     },

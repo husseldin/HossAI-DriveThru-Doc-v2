@@ -19,12 +19,12 @@ class Settings(BaseSettings):
 
     # Server Settings
     host: str = Field(default="0.0.0.0", env="HOST")
-    port: int = Field(default=8000, env="PORT")
+    port: int = Field(default=46000, env="PORT")
     workers: int = Field(default=4, env="WORKERS")
 
     # Database Settings
     database_url: str = Field(
-        default="postgresql://user:password@localhost:5432/drivethru",
+        default="postgresql://user:password@localhost:46432/drivethru",
         env="DATABASE_URL"
     )
     database_pool_size: int = Field(default=20, env="DATABASE_POOL_SIZE")
@@ -32,7 +32,7 @@ class Settings(BaseSettings):
 
     # Redis Cache Settings
     redis_host: str = Field(default="localhost", env="REDIS_HOST")
-    redis_port: int = Field(default=6379, env="REDIS_PORT")
+    redis_port: int = Field(default=46379, env="REDIS_PORT")
     redis_db: int = Field(default=0, env="REDIS_DB")
     redis_password: str = Field(default="", env="REDIS_PASSWORD")
     cache_ttl: int = Field(default=3600, env="CACHE_TTL")
@@ -91,7 +91,7 @@ class Settings(BaseSettings):
 
     # CORS Settings
     cors_origins: str = Field(
-        default="http://localhost:3000,http://localhost:8000",
+        default="http://localhost:46001,http://localhost:46002,http://localhost:46000",
         env="CORS_ORIGINS"
     )
     cors_allow_credentials: bool = Field(default=True, env="CORS_ALLOW_CREDENTIALS")

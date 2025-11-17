@@ -433,7 +433,7 @@ class TestCORS:
     @pytest.mark.api
     def test_cors_headers(self, test_client):
         """Test CORS headers are present"""
-        headers = {"Origin": "http://localhost:3000"}
+        headers = {"Origin": "http://localhost:46001"}
         response = test_client.options("/api/v1/menu/branches", headers=headers)
 
         # Check for CORS headers

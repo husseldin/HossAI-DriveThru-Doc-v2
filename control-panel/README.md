@@ -61,7 +61,7 @@ Copy the `.env.local` file and update if needed:
 
 ```bash
 # Already exists with default values
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=http://localhost:46000
 ```
 
 ### 3. Start Development Server
@@ -70,11 +70,11 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `http://localhost:46001`
 
 ### 4. Ensure Backend is Running
 
-Make sure the backend API is running at `http://localhost:8000`:
+Make sure the backend API is running at `http://localhost:46000`:
 
 ```bash
 # From project root
@@ -271,7 +271,7 @@ The Control Panel can be deployed to:
 
 ## Backend API Reference
 
-Base URL: `http://localhost:8000/api/v1`
+Base URL: `http://localhost:46000/api/v1`
 
 ### Branch Endpoints
 - `GET /branches` - List branches

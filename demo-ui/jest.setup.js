@@ -97,8 +97,8 @@ Object.defineProperty(navigator, 'mediaDevices', {
 })
 
 // Set environment variables
-process.env.NEXT_PUBLIC_API_URL = 'http://localhost:8000'
-process.env.NEXT_PUBLIC_WS_URL = 'ws://localhost:8000'
+process.env.NEXT_PUBLIC_API_URL = 'http://localhost:46000'
+process.env.NEXT_PUBLIC_WS_URL = 'ws://localhost:46000'
 
 // Suppress console errors in tests
 const originalError = console.error

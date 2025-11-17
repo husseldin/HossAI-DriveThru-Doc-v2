@@ -93,7 +93,7 @@ The AI Drive-Thru Demo Application is a comprehensive voice-powered ordering sys
 │                                                                   │
 │  ┌──────────────────┐              ┌──────────────────┐        │
 │  │   Demo UI        │              │  Mobile App      │        │
-│  │  (Port 3001)     │              │  (Future)        │        │
+│  │  (Port 46002)    │              │  (Future)        │        │
 │  │  - Voice UI      │              │                  │        │
 │  │  - Order Display │              │                  │        │
 │  └────────┬─────────┘              └──────────────────┘        │
@@ -106,7 +106,7 @@ The AI Drive-Thru Demo Application is a comprehensive voice-powered ordering sys
 │                        BACKEND SERVICES                          │
 │                                                                   │
 │  ┌──────────────────────────────────────────────────────────┐  │
-│  │              FastAPI Application (Port 8000)              │  │
+│  │              FastAPI Application (Port 46000)             │  │
 │  │                                                            │  │
 │  │  ┌───────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐ │  │
 │  │  │ Voice API │  │ Menu API │  │  NLU API │  │ Health │ │  │
@@ -142,7 +142,7 @@ The AI Drive-Thru Demo Application is a comprehensive voice-powered ordering sys
 │                                                                   │
 │  ┌──────────────────┐                                           │
 │  │ Control Panel    │                                           │
-│  │  (Port 3000)     │                                           │
+│  │  (Port 46001)    │                                           │
 │  │  - Dashboard     │                                           │
 │  │  - Menu Mgmt     │                                           │
 │  │  - Settings      │                                           │
@@ -216,20 +216,20 @@ HossAI-DriveThru-Doc-v2/
 ### Backend
 ```bash
 pip install -r requirements.txt
-uvicorn src.main:app --reload
-# Access: http://localhost:8000
+uvicorn src.main:app --reload --port 46000
+# Access: http://localhost:46000
 ```
 
 ### Control Panel
 ```bash
 cd control-panel && npm install && npm run dev
-# Access: http://localhost:3000
+# Access: http://localhost:46001
 ```
 
 ### Demo UI
 ```bash
 cd demo-ui && npm install && npm run dev
-# Access: http://localhost:3001
+# Access: http://localhost:46002
 ```
 
 ---

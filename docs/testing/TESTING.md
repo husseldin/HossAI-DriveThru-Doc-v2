@@ -267,7 +267,7 @@ import { test, expect } from '@playwright/test'
 
 test('complete ordering workflow', async ({ page }) => {
   // Navigate to demo UI
-  await page.goto('http://localhost:3001')
+  await page.goto('http://localhost:46002')
 
   // Select language
   await page.click('text=Start Order')

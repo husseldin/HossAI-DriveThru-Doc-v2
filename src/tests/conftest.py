@@ -311,7 +311,7 @@ def setup_test_environment():
     """Setup test environment variables"""
     os.environ["TESTING"] = "1"
     os.environ["DATABASE_URL"] = TEST_DATABASE_URL
-    os.environ["REDIS_URL"] = "redis://localhost:6379/1"  # Test Redis DB
+    os.environ["REDIS_URL"] = "redis://localhost:46379/1"  # Test Redis DB
 
     yield
 

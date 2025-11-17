@@ -106,8 +106,8 @@ npm install
 Create `.env.local`:
 
 ```bash
-NEXT_PUBLIC_API_URL=http://localhost:8000
-NEXT_PUBLIC_WS_URL=ws://localhost:8000
+NEXT_PUBLIC_API_URL=http://localhost:46000
+NEXT_PUBLIC_WS_URL=ws://localhost:46000
 ```
 
 ### 3. Start Development Server
@@ -116,7 +116,7 @@ NEXT_PUBLIC_WS_URL=ws://localhost:8000
 npm run dev
 ```
 
-The application will be available at `http://localhost:3001`
+The application will be available at `http://localhost:46002`
 
 ### 4. Ensure Backend is Running
 
@@ -160,7 +160,7 @@ python main.py
 
 ```typescript
 // Connect to voice WebSocket
-const ws = new WebSocket(`ws://localhost:8000/ws/voice/${clientId}`)
+const ws = new WebSocket(`ws://localhost:46000/ws/voice/${clientId}`)
 
 // Send audio chunk
 ws.send(JSON.stringify({
@@ -335,7 +335,7 @@ When implementing features:
 
 ## Notes
 
-- Demo UI runs on port 3001 to avoid conflicts with Control Panel (port 3000)
+- Demo UI runs on port 46002 to avoid conflicts with Control Panel (port 46001)
 - WebSocket client ID should be unique per session (use UUID)
 - Audio format: WAV, 16kHz, mono recommended
 - Maximum order size: 20 items (configurable)

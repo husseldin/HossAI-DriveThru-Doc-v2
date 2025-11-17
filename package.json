@@ -1,0 +1,33 @@
+{
+  "name": "ai-drivethru-demo",
+  "version": "1.0.0",
+  "description": "AI-Powered Drive-Thru Ordering System with Voice Interface",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Run tests in individual packages\"",
+    "test:backend": "cd src && pytest",
+    "test:control-panel": "cd control-panel && npm test",
+    "test:demo-ui": "cd demo-ui && npm test",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "test:all": "npm run test:backend && npm run test:control-panel && npm run test:demo-ui",
+    "dev:backend": "cd src && uvicorn main:app --reload",
+    "dev:control-panel": "cd control-panel && npm run dev",
+    "dev:demo-ui": "cd demo-ui && npm run dev"
+  },
+  "keywords": [
+    "ai",
+    "voice-interface",
+    "drive-thru",
+    "nlu",
+    "speech-recognition",
+    "tts",
+    "stt"
+  ],
+  "author": "HossAI",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0"
+  }
+}
